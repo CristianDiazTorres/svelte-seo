@@ -1,0 +1,56 @@
+{
+  "name": "svelte-seo",
+  "version": "1.5.4",
+  "license": "MIT",
+  "repository": "git@github.com:artiebits/svelte-seo.git",
+  "scripts": {
+    "dev": "vite dev",
+    "build": "svelte-kit sync && svelte-package",
+    "prepublishOnly": "npm build",
+    "check": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json",
+    "check:watch": "svelte-kit sync && svelte-check --tsconfig ./jsconfig.json --watch",
+    "test": "playwright test",
+    "lint": "prettier --plugin-search-dir . --check . && eslint .",
+    "format": "prettier --plugin-search-dir . --write .",
+    "preview": "vite build && vite preview"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.29.2",
+    "@sveltejs/adapter-auto": "^1.0.0",
+    "@sveltejs/kit": "^1.15.2",
+    "@sveltejs/package": "1.0.2",
+    "eslint": "^8.31.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-svelte3": "^4.0.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^13.1.0",
+    "prettier": "^2.8.2",
+    "prettier-plugin-svelte": "^2.9.0",
+    "svelte": "^3.55.0",
+    "svelte-check": "^3.0.1",
+    "tslib": "^2.4.1",
+    "typescript": "^4.9.4",
+    "vite": "^4.0.5"
+  },
+  "type": "module",
+  "keywords": [
+    "svelte",
+    "sveltekit",
+    "sapper",
+    "seo",
+    "ssr",
+    "search engines",
+    "meta tags",
+    "open graph",
+    "open graph tags",
+    "JSON-LD",
+    "twitter card tags"
+  ],
+  "lint-staged": {
+    "*.svelte": "prettier --write",
+    "*.{js,svelte}": "eslint --cache --fix"
+  },
+  "dependencies": {
+    "schema-dts": "^1.1.2"
+  }
+}
